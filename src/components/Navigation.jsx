@@ -4,6 +4,7 @@ const NavigationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  position: sticky;
 `;
 const NavButton = styled.a`
   margin: 10px;

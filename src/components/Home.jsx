@@ -1,27 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.section`
-  display: flex;
-`;
+import { Background } from "./Background";
+import { Navigation } from "./Navigation";
 
-const Background = styled.div`
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  content: "";
-  position: absolute;
-  display: block;
-  background-image: url(https://images.unsplash.com/photo-1536530719072-4cf7d4d7018e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=82059643ae34f6a5cd23f601641a14cc&auto=format&fit=crop&w=667&q=80);
-  background-size: cover;
-  transform-origin: center center 0;
-  transform: translateZ(-1px) scale(2);
+const Wrapper = styled.section`
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  height: 100vh;
+  width: 100vw;
   z-index: -1;
-  min-height: 100vh;
 `;
 
 const Content = styled.div`
+  display: flex;
+  justify-content: center;
   font-family: serif;
   font-size: 45px;
   letter-spacing: 0.1em;
@@ -35,10 +27,31 @@ const Content = styled.div`
     font-size: 20px;
   }
 `;
+
+// const Neon = styled.span`
+//   color: #fff;
+//   text-align: center;
+//   animation: glow 1s ease-in-out infinite alternate;
+//   // font-family: "Neon 80s";
+//   font-family: "BenguiatITCW01-BoldCn";
+
+//   @keyframes glow {
+//     from {
+//       text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #0033ff,
+//         0 0 40px #0062ff, 0 0 50px #0072ff, 0 0 60px #00a2ff, 0 0 70px #00dfff;
+//     }
+//     to {
+//       text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #fe1000,
+//         0 0 50px #fa1c03, 0 0 60px #ff3300, 0 0 70px #ff5306, 0 0 80px #ff6600;
+//     }
+//   }
+// `;
+
 export const Home = () => {
   return (
     <Wrapper>
       <Background />
+      <Navigation />
       <Content>Hi, I'm Joanna. I do stuff.</Content>
     </Wrapper>
   );
