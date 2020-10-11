@@ -1,15 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Title } from "../common/Title";
 import { Project } from "./Project";
+import { Section } from "../common/Section";
+
 import projects from "./projects";
 
 const ProjectsWrapper = styled.div`
-  background: 
-  height: 100vh;
-`;
-const ProjectsSection = styled.div`
   display: flex;
   justify-content: space-evenly;
   position: relative;
@@ -20,13 +17,12 @@ const ProjectsSection = styled.div`
 
 export const Projects = () => {
   return (
-    <ProjectsWrapper id="projects">
-      <Title>projects</Title>
-      <ProjectsSection>
+    <Section id="projects" isLight={true} title="projects">
+      <ProjectsWrapper>
         {projects.map((project) => (
           <Project {...project} />
         ))}
-      </ProjectsSection>
-    </ProjectsWrapper>
+      </ProjectsWrapper>
+    </Section>
   );
 };

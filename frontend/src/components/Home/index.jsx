@@ -1,13 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Section } from "../common/Section";
 import { Background } from "./Background";
-
-const WrapperHome = styled.section`
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  height: 90vh;
-  z-index: -1;
-`;
 
 const HomeTitle = styled.div`
   display: flex;
@@ -16,7 +11,7 @@ const HomeTitle = styled.div`
   font-size: 45px;
   letter-spacing: 0.1em;
   margin: 0 auto;
-  line-height: 100vh;
+  line-height: 85vh;
   color: white;
   @media (max-width: 500px) {
     font-size: 30px;
@@ -28,9 +23,9 @@ const HomeTitle = styled.div`
 
 export const Home = () => {
   return (
-    <WrapperHome id="home">
+    <Section id="home" isLight={false}>
       <Background />
       <HomeTitle>Hi, I'm Joanna. I do stuff.</HomeTitle>
-    </WrapperHome>
+    </Section>
   );
 };

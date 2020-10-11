@@ -10,13 +10,7 @@ const EmailWrapper = styled.div`
 
 const Form = styled.form`
   margin: auto;
-  width: 40vw;
-  @media (max-width: 528px) {
-    width: 100vw;
-  }
-  @media (min-width: 529px) and (max-width: 836px) {
-    width: 80vw;
-  }
+  max-width: 500px;
 `;
 
 const FormField = styled.div`
@@ -65,6 +59,7 @@ export const EmailForm = () => {
   const onMessageChange = (event) => {
     setMessage(event.target.value);
   };
+
   return (
     <EmailWrapper>
       <Form onSubmit={handleFormSubmit}>

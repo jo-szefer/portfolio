@@ -27,7 +27,7 @@ export const MenuButtons = ({ handleButtonClick }) => {
       const offsetTop = element.offsetTop - navbarHeight;
       const offsetBottom = element.offsetHeight + offsetTop;
       if (scrollY >= offsetTop && scrollY < offsetBottom) {
-        return { color: "rgb(247, 78, 161)" };
+        return { color: "#f74ea1" };
       } else {
         return { color: "white" };
       }
