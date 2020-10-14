@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Draggable from "react-draggable";
 
 import { Button } from "../common/Button";
 
@@ -7,12 +8,14 @@ const ProjectWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 1);
+  margin: 10px;
 `;
 
 const ProjectImage = styled.img`
   width: 40vw;
   height: auto;
-  margin: 10px;
+
   filter: brightness(${(props) => props.brightness}%);
   @media (max-width: 400px) {
     width: 100%;
@@ -40,26 +43,30 @@ const ProjectButton = styled(Button)`
 export const Project = (props) => {
   const [buttonOpacity, setButtonOpacity] = React.useState(0);
   const [imageBrightness, setImageBrightness] = React.useState(100);
+  const [key, setKey] = React.useState(0);
 
   const handleMouseEnter = () => {
     setButtonOpacity(1);
     setImageBrightness(20);
   };
   const handleMouseLeave = () => {
+    setKey(key + 1);
     setButtonOpacity(0);
     setImageBrightness(100);
   };
 
   return (
-    <ProjectWrapper
-      onMouseEnter={() => handleMouseEnter()}
-      onMouseLeave={() => handleMouseLeave()}
-    >
-      <ProjectImage src={props.image} brightness={imageBrightness} />
-      <ButtonsWrapper>
-        <ProjectButton opacity={buttonOpacity}>Live</ProjectButton>
-        <ProjectButton opacity={buttonOpacity}>Code</ProjectButton>
-      </ButtonsWrapper>
-    </ProjectWrapper>
+    <Draggable key={key}>
+      <ProjectWrapper
+        onMouseEnter={() => handleMouseEnter()}
+        onMouseLeave={() => handleMouseLeave()}
+      >
+        <ProjectImage src={props.image} brightness={imageBrightness} />
+        <ButtonsWrapper>
+          <ProjectButton opacity={buttonOpacity}>Live</ProjectButton>
+          <ProjectButton opacity={buttonOpacity}>Code</ProjectButton>
+        </ButtonsWrapper>
+      </ProjectWrapper>
+    </Draggable>
   );
 };

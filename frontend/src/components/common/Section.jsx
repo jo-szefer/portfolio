@@ -7,7 +7,7 @@ const SectionWrapper = styled.div`
   min-height: 90vh;
   background: ${(props) =>
     props.isLight
-      ? "#f7f7f2"
+      ? "#f4faff"
       : "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)"};
   display: flex;
   flex-direction: column;

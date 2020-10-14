@@ -1,9 +1,9 @@
-import piesJPG from "../../images/doggo.jpeg";
-import pies2JPG from "../../images/doggo2.jpg";
+import portfolioJPG from "../../images/portfolio.jpg";
+import coffeeShopJPG from "../../images/coffee-shop.jpg";
 
 const projects = [
-  { name: "maly-piesek", image: piesJPG },
-  { name: "tez-maly-piesek", image: pies2JPG },
+  { name: "portfolio", image: portfolioJPG },
+  { name: "coffee-shop", image: coffeeShopJPG },
 ];
 
 export default projects;
