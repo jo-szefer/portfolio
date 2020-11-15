@@ -12,7 +12,7 @@ const NavigationContainer = styled.div`
   height: 10vh;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
 `;
 
 export const Navigation = () => {
