@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { isWindowOnElement } from "../../utils/isWindowOnElement";
+
 const NavButton = styled.a`
   margin: 10px;
   color: white;
@@ -16,21 +18,13 @@ const NavButton = styled.a`
 `;
 
 export const MenuButtons = ({ handleButtonClick }) => {
-  const [scrollY, setScrollY] = React.useState(0);
+  const [_, setScrollY] = React.useState(0);
 
   const getStyle = (elementID) => {
-    const element = document.getElementById(elementID);
-    const navbar = document.getElementById("navbar");
-
-    if (element && navbar) {
-      const navbarHeight = navbar.offsetHeight;
-      const offsetTop = element.offsetTop - navbarHeight;
-      const offsetBottom = element.offsetHeight + offsetTop;
-      if (scrollY >= offsetTop && scrollY < offsetBottom) {
-        return { color: "#f74ea1" };
-      } else {
-        return { color: "white" };
-      }
+    if (isWindowOnElement(elementID)) {
+      return { color: " #ffa5a5" };
+    } else {
+      return { color: "white" };
     }
   };
 
