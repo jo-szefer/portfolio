@@ -12,7 +12,7 @@ const HomeTitle = styled.div`
   letter-spacing: 0.1em;
   margin: 0 auto;
   line-height: 85vh;
-  color: white;
+  color: #f5f1ed;
   @media (max-width: 1024px) {
     font-size: 6vw;
   }

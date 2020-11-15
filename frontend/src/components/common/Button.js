@@ -7,7 +7,7 @@ export const Button = styled.button`
   text-align: center;
   text-decoration: none;
   padding: 1em;
-  color: rgb(247, 78, 161);
+  color: #ffa5a5;
   background: none;
   font-family: sans-serif;
   font-weight: 700;
@@ -16,11 +16,11 @@ export const Button = styled.button`
   display: block;
   margin: 0 auto;
   border-style: solid;
-  border-color: rgb(247, 78, 161);
+  border-color: #ffa5a5;
   border-radius: 0.5rem;
   transition: background-color 0.25s ease 0s, color 0.25s ease 0s;
   &:hover {
-    background-color: rgb(247, 78, 161);
+    background-color: #ffa5a5;
     color: rgb(255, 255, 255);
   }
 `;

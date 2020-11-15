@@ -7,7 +7,7 @@ const SectionWrapper = styled.div`
   min-height: 90vh;
   background: ${(props) =>
     props.isLight
-      ? "#f4faff"
+      ? "#f5f1ed"
       : "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)"};
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ const SectionWrapper = styled.div`
 `;
 
 const Title = styled(RawTitle)`
-  color: ${(props) => (props.isLight ? "#0f131b" : "#f7f7f2")};
+  color: ${(props) => (props.isLight ? "#0f131b" : "#f5f1ed")};
   border-bottom: 2px solid ${(props) => (props.isLight ? "#f74ea1" : "#f7f7f2")};
 `;
 

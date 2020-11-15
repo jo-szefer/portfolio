@@ -26,7 +26,7 @@ const Email = styled.input`
   cursor: pointer;
   margin: 10px;
   padding: 0.8em;
-  border: rgb(247, 78, 161);
+  border: #ffa5a5;
   border-style: solid;
   border-radius: 0.5rem;
 `;
@@ -37,7 +37,7 @@ const TextArea = styled.textarea`
   font-family: Arial, sans-serif;
   margin: 10px;
   padding: 0.8em;
-  border: rgb(247, 78, 161);
+  border: #ffa5a5;
   background: none;
   color: white;
   border-style: solid;
