@@ -14,15 +14,16 @@ const AboutSectionContainer = styled.div`
 `;
 
 const EntranceAnimation = keyframes`
-0% {
-  opacity: 0;
-  -webkit-transform: scale3d(.4, .3, .4);
-  transform: scale3d(.3, .3, .3);
-}
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.4, .3, .4);
+    transform: scale3d(.3, .3, .3);
+  }
 
-50% {
-  opacity: 1;
-}`;
+  50% {
+    opacity: 1;
+  }
+`;
 
 const AnimWrap = styled.div`
   animation-name: ${EntranceAnimation};
@@ -32,35 +33,42 @@ const AnimWrap = styled.div`
 const AboutContentWrapper = styled(Content)`
   width: 50%;
   z-index: 2;
+  padding: 25px;
   margin: 0 auto;
   background-color: #f5f1ed;
   position: relative;
   box-shadow: 2px 2px 10px #747474;
-  height: 50vh;
   border-radius: 20px;
   font-size: 1em;
   font-family: "Lato";
   text-align: center;
-  p {
-    width: 50vw;
-  }
   h3 {
     color: #ffa5a5;
   }
+
+  @media (max-width: 572px) {
+    width: 90%;
+    border-radius: none;
+    box-shadow: none;
+  }
 `;
+
 const TechnologiesIcons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  @media (max-width: 572px) {
+    flex-direction: row;
+  }
 `;
+
 const AboutBackground = styled.div`
   height: 50%;
   background: #da9f93;
   position: absolute;
   z-index: 1;
   width: 100%;
-
   top: 30%;
   left: 0;
 `;
@@ -99,6 +107,7 @@ export const About = () => {
             my "Projects" card.
           </p>
           <h3>I work with technologies such as</h3>
+
           {isSectionVisible ? (
             <TechnologiesIcons>
               <AnimWrap>

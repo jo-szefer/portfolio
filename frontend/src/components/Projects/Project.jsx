@@ -9,16 +9,17 @@ const ProjectWrapper = styled.div`
   display: flex;
   justify-content: center;
   box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 1);
-  margin: 10px;
+  margin: 20px;
 `;
 
 const ProjectImage = styled.img`
   width: 40vw;
   height: auto;
-
   filter: brightness(${(props) => props.brightness}%);
-  @media (max-width: 400px) {
+  @media (max-width: 1044px) {
     width: 100%;
+    margin: 20px;
+    padding: 15px;
   }
 `;
 const ButtonsWrapper = styled.div`

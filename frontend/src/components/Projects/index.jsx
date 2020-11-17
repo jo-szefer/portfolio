@@ -10,7 +10,7 @@ const ProjectsWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  @media (max-width: 400px) {
+  @media (max-width: 1044px) {
     flex-direction: column;
   }
 `;

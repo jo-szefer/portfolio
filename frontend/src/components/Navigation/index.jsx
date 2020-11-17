@@ -17,11 +17,11 @@ const NavigationContainer = styled.div`
 
 export const Navigation = () => {
   const [burgerVisible, setBurgerVisible] = React.useState(
-    window.innerWidth <= 768
+    window.innerWidth <= 767
   );
 
   const isScreenWide = () => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 767) {
       setBurgerVisible(false);
     } else {
       setBurgerVisible(true);

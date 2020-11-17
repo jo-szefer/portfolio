@@ -10,6 +10,7 @@ const LogosWrapper = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin: 10%;
 `;
 
 const GithubLogo = styled.a`

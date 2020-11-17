@@ -13,12 +13,16 @@ const StyledMenu = styled.nav`
   height: 100vh;
   text-align: center;
   position: absolute;
-  top: 0;
+  top: 0vh;
   left: 0;
   transition: transform 0.3s ease-in-out;
-
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     width: 100%;
+    height: 100vh;
+  }
+
+  @media (min-width: 501px) and (max-width: 768px) {
+    width: 50%;
   }
 
   a {
@@ -30,7 +34,7 @@ const StyledMenu = styled.nav`
     text-decoration: none;
     transition: color 0.3s linear;
 
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       font-size: 1.5rem;
       text-align: center;
     }
