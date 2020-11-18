@@ -31,9 +31,10 @@ const AnimWrap = styled.div`
 `;
 
 const AboutContentWrapper = styled(Content)`
+  min-height: 50vh;
   width: 50%;
   z-index: 2;
-  padding: 25px;
+  padding-bottom: 25px;
   margin: 0 auto;
   background-color: #f5f1ed;
   position: relative;
@@ -50,6 +51,13 @@ const AboutContentWrapper = styled(Content)`
     width: 90%;
     border-radius: none;
     box-shadow: none;
+  }
+
+  @media (width: 1024px) and (height: 1366px) {
+    width: 90%;
+    height: 40%;
+    font-size: 1.5em;
+    padding: 30px 25px 0 25px;
   }
 `;
 
