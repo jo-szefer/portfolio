@@ -10,7 +10,9 @@ const LogosWrapper = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  margin: 10%;
+  @media (max-width: 768px) {
+    margin: 10%;
+  }
 `;
 
 const GithubLogo = styled.a`
@@ -36,7 +38,10 @@ const LinkedinLogo = styled.a`
 
 export const SocialLinks = () => (
   <LogosWrapper>
-    <GithubLogo href="https://github.com" target="_blank" />
-    <LinkedinLogo href="https://linkedin.com" target="_blank" />
+    <GithubLogo href="https://github.com/jo-szefer" target="_blank" />
+    <LinkedinLogo
+      href="https://www.linkedin.com/in/joanna-szefer-95ab701aa/"
+      target="_blank"
+    />
   </LogosWrapper>
 );
