@@ -1,6 +1,10 @@
 import express from "express";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+
 import { sendEmail } from "./controllers/sendEmail";
+
+dotenv.config();
 
 const app = express();
 

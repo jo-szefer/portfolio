@@ -7,17 +7,17 @@ export const sendMail = (address, message) =>
       port: 587,
       secure: false,
       auth: {
-        user: "",
-        pass: "",
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     transporter.sendMail(
       {
         from: address,
-        to: "",
+        to: process.env.TO_EMAIL,
         subject: "Question",
-        text: message,
+        text: `from ${address} \n ${message}`,
       },
       (error) => {
         if (error) {
