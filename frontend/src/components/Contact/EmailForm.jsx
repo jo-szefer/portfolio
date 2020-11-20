@@ -45,16 +45,18 @@ const TextArea = styled.textarea`
 `;
 
 export const EmailForm = () => {
-  const [email, setEmail] = React.useState("");
+  const [address, setAddress] = React.useState("");
   const [message, setMessage] = React.useState("");
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    sendMail({ email, message });
+    sendMail({ address, message })
+      .then(() => alert("Email successfully sent :-)"))
+      .catch((status) => alert(`Something went wrong: ${status}`));
   };
 
   const onEmailChange = (event) => {
-    setEmail(event.target.value);
+    setAddress(event.target.value);
   };
   const onMessageChange = (event) => {
     setMessage(event.target.value);

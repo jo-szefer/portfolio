@@ -1,8 +1,18 @@
 import axios from "axios";
 
 export const sendMail = (data) => {
-  axios
-    .post("/email", data)
-    .then((response) => console.log(response.status))
-    .catch((error) => console.log(error));
+  return new Promise((res, rej) => {
+    axios
+      .post("http://localhost:5000/email", data)
+      .then((response) => {
+        if (response.status === 200) {
+          res();
+        } else {
+          rej(response.status);
+        }
+      })
+      .catch(() => {
+        rej("Unknown error");
+      });
+  });
 };
