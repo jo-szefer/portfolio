@@ -3,7 +3,7 @@ import axios from "axios";
 export const sendMail = (data) => {
   return new Promise((res, rej) => {
     axios
-      .post("http://localhost:5000/email", data)
+      .post("/email", data)
       .then((response) => {
         if (response.status === 200) {
           res();
