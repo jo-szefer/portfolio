@@ -1,8 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
+const StarsContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+`;
+
 const Star = styled.div`
   position: absolute;
+  left: 0;
   border-radius: 50%;
   animation: animStar 60s linear infinite;
 
@@ -16,7 +23,7 @@ const Star = styled.div`
   }
 `;
 
-export const Background = () => {
+export const Background = (props) => {
   const getStars = (count, size, speed) => {
     const stars = [];
     const colors = ["#fff", "#cad8ff", "#ffebd1"];
@@ -40,16 +47,17 @@ export const Background = () => {
   };
 
   return (
-    <div>
-      {getStars(10, 5, 20).map((star) => (
+    <StarsContainer>
+      {getStars(5, 5, 20).map((star) => (
         <Star style={star} />
       ))}
-      {getStars(20, 3, 40).map((star) => (
+      {getStars(10, 3, 40).map((star) => (
         <Star style={star} />
       ))}
-      {getStars(30, 1, 60).map((star) => (
+      {getStars(10, 1, 60).map((star) => (
         <Star style={star} />
       ))}
-    </div>
+      {props.children}
+    </StarsContainer>
   );
 };

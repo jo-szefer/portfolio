@@ -17,11 +17,11 @@ const NavButton = styled.a`
   }
 `;
 
-export const MenuButtons = ({ handleButtonClick }) => {
+export const MenuButtons = ({ handleButtonClick, isRightNav }) => {
   const [_, setScrollY] = React.useState(0);
 
   const getStyle = (elementID) => {
-    if (isWindowOnElement(elementID)) {
+    if (!isRightNav && isWindowOnElement(elementID)) {
       return { color: " #ffa5a5" };
     } else {
       return { color: "white" };

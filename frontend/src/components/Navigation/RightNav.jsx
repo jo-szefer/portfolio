@@ -44,7 +44,7 @@ const StyledMenu = styled.nav`
 export const RightNav = ({ open, handleButtonClick }) => {
   return (
     <StyledMenu open={open}>
-      <MenuButtons handleButtonClick={handleButtonClick} />
+      <MenuButtons isRightNav={true} handleButtonClick={handleButtonClick} />
     </StyledMenu>
   );
 };

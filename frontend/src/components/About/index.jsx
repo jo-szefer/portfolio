@@ -31,6 +31,9 @@ const AnimWrap = styled.div`
 `;
 
 const AboutContentWrapper = styled(Content)`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   min-height: 50vh;
   width: 50%;
   z-index: 2;
