@@ -16,7 +16,6 @@
     "nodemailer": "^6.4.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-draggable": "^4.4.3",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.1",
     "styled-icons": "^10.21.0"

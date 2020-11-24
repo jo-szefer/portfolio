@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Draggable from "react-draggable";
 
 import { Button } from "../common/Button";
 
@@ -57,17 +56,15 @@ export const Project = (props) => {
   };
 
   return (
-    <Draggable key={key}>
-      <ProjectWrapper
-        onMouseEnter={() => handleMouseEnter()}
-        onMouseLeave={() => handleMouseLeave()}
-      >
-        <ProjectImage src={props.image} brightness={imageBrightness} />
-        <ButtonsWrapper>
-          <ProjectButton opacity={buttonOpacity}>Live</ProjectButton>
-          <ProjectButton opacity={buttonOpacity}>Code</ProjectButton>
-        </ButtonsWrapper>
-      </ProjectWrapper>
-    </Draggable>
+    <ProjectWrapper
+      onMouseEnter={() => handleMouseEnter()}
+      onMouseLeave={() => handleMouseLeave()}
+    >
+      <ProjectImage src={props.image} brightness={imageBrightness} />
+      <ButtonsWrapper>
+        <ProjectButton opacity={buttonOpacity}>Live</ProjectButton>
+        <ProjectButton opacity={buttonOpacity}>Code</ProjectButton>
+      </ButtonsWrapper>
+    </ProjectWrapper>
   );
 };
