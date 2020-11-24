@@ -26,8 +26,9 @@ const EntranceAnimation = keyframes`
 `;
 
 const AnimWrap = styled.div`
-  animation-name: ${EntranceAnimation};
+  animation-name: ${(props) => (props.isVisible ? EntranceAnimation : "none")};
   animation-duration: 3s;
+  opacity: ${(props) => (props.isVisible ? 1 : 0)};
 `;
 
 const AboutContentWrapper = styled(Content)`
@@ -43,7 +44,6 @@ const AboutContentWrapper = styled(Content)`
   position: relative;
   box-shadow: 2px 2px 10px #747474;
   border-radius: 20px;
-  font-size: 1em;
   font-family: "Lato";
   text-align: center;
   h3 {
@@ -119,51 +119,49 @@ export const About = () => {
           </p>
           <h3>I work with technologies such as</h3>
 
-          {isSectionVisible ? (
-            <TechnologiesIcons>
-              <AnimWrap>
-                <FontAwesomeIcon
-                  className="icon"
-                  icon={Icons.faHtml5}
-                  size="4x"
-                  color="#D93E06"
-                  style={{ margin: "20px" }}
-                />
-              </AnimWrap>
-              <AnimWrap>
-                <FontAwesomeIcon
-                  icon={Icons.faCss3Alt}
-                  size="4x"
-                  color="#1A6FB4"
-                  style={{ margin: "20px" }}
-                />
-              </AnimWrap>
-              <AnimWrap>
-                <FontAwesomeIcon
-                  icon={Icons.faJs}
-                  size="4x"
-                  color="#EFD81D"
-                  style={{ margin: "20px" }}
-                />
-              </AnimWrap>
-              <AnimWrap>
-                <FontAwesomeIcon
-                  icon={Icons.faReact}
-                  size="4x"
-                  color="#48CEF7"
-                  style={{ margin: "20px" }}
-                />
-              </AnimWrap>
-              <AnimWrap>
-                <FontAwesomeIcon
-                  icon={Icons.faNode}
-                  size="4x"
-                  color="#7CB700"
-                  style={{ margin: "20px" }}
-                />
-              </AnimWrap>
-            </TechnologiesIcons>
-          ) : null}
+          <TechnologiesIcons>
+            <AnimWrap isVisible={isSectionVisible}>
+              <FontAwesomeIcon
+                className="icon"
+                icon={Icons.faHtml5}
+                size="4x"
+                color="#D93E06"
+                style={{ margin: "20px" }}
+              />
+            </AnimWrap>
+            <AnimWrap isVisible={isSectionVisible}>
+              <FontAwesomeIcon
+                icon={Icons.faCss3Alt}
+                size="4x"
+                color="#1A6FB4"
+                style={{ margin: "20px" }}
+              />
+            </AnimWrap>
+            <AnimWrap isVisible={isSectionVisible}>
+              <FontAwesomeIcon
+                icon={Icons.faJs}
+                size="4x"
+                color="#EFD81D"
+                style={{ margin: "20px" }}
+              />
+            </AnimWrap>
+            <AnimWrap isVisible={isSectionVisible}>
+              <FontAwesomeIcon
+                icon={Icons.faReact}
+                size="4x"
+                color="#48CEF7"
+                style={{ margin: "20px" }}
+              />
+            </AnimWrap>
+            <AnimWrap isVisible={isSectionVisible}>
+              <FontAwesomeIcon
+                icon={Icons.faNode}
+                size="4x"
+                color="#7CB700"
+                style={{ margin: "20px" }}
+              />
+            </AnimWrap>
+          </TechnologiesIcons>
         </AboutContentWrapper>
         <AboutBackground />
       </AboutSectionContainer>

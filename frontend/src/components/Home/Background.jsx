@@ -15,7 +15,7 @@ const Star = styled.div`
 
   @keyframes animStar {
     0% {
-      top: 100vh;
+      top: 90vh;
     }
     100% {
       top: -5px;
