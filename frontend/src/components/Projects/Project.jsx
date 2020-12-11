@@ -43,16 +43,22 @@ const ProjectButton = styled(Button)`
 export const Project = (props) => {
   const [buttonOpacity, setButtonOpacity] = React.useState(0);
   const [imageBrightness, setImageBrightness] = React.useState(100);
-  const [key, setKey] = React.useState(0);
 
   const handleMouseEnter = () => {
     setButtonOpacity(1);
     setImageBrightness(20);
   };
   const handleMouseLeave = () => {
-    setKey(key + 1);
     setButtonOpacity(0);
     setImageBrightness(100);
+  };
+  const openLive = () => {
+    const win = window.open(props.live, "_blank");
+    win.focus();
+  };
+  const openGithub = () => {
+    const win = window.open(props.code, "_blank");
+    win.focus();
   };
 
   return (
@@ -62,8 +68,12 @@ export const Project = (props) => {
     >
       <ProjectImage src={props.image} brightness={imageBrightness} />
       <ButtonsWrapper>
-        <ProjectButton opacity={buttonOpacity}>Live</ProjectButton>
-        <ProjectButton opacity={buttonOpacity}>Code</ProjectButton>
+        <ProjectButton opacity={buttonOpacity} onClick={openLive}>
+          Live
+        </ProjectButton>
+        <ProjectButton opacity={buttonOpacity} onClick={openGithub}>
+          Code
+        </ProjectButton>
       </ButtonsWrapper>
     </ProjectWrapper>
   );
