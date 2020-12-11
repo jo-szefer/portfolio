@@ -20,6 +20,7 @@ const FormField = styled.div`
   align-items: center;
 `;
 const Email = styled.input`
+  outline: none;
   width: 100%;
   color: white;
   background: none;
@@ -32,6 +33,7 @@ const Email = styled.input`
 `;
 
 const TextArea = styled.textarea`
+  outline: none;
   width: 100%;
   cursor: pointer;
   font-family: Arial, sans-serif;
